@@ -29,7 +29,7 @@ import { MatCardModule } from '@angular/material/card';
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
-import { TechnicianListComponent } from './components/technician-list/technician-list.component';
+import { TechnicianListComponent } from './components/technician/technician-list/technician-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from "ngx-toastr";
 import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
