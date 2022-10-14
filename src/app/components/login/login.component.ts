@@ -23,21 +23,26 @@ export class LoginComponent implements OnInit {
   constructor(
       private toast: ToastrService,
       private service: AuthService,
-      private router: Router){ }
+      private router: Router) {
+  }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+  }
 
   login() {
     this.service.authenticate(this.credentials).subscribe(answer => {
       this.service.successfulLogin(answer.headers.get('Authorization').substring(7));
       this.router.navigate([''])
-      }, () => {
+    }, () => {
       this.toast.error('The email or password is incorrect');
     })
-
   }
 
   fieldValidation(): boolean {
-      return this.email.valid && this.password.valid;
+    return this.email.valid && this.password.valid;
   }
 }
+
+
+
+
