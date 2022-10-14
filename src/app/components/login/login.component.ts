@@ -30,8 +30,8 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.service.authenticate(this.credentials).subscribe(answer => {
-      this.service.successfulLogin(answer.headers.get('Authorization').substring(7));
+    this.service.authenticate(this.credentials).subscribe(response => {
+      this.service.successfulLogin(response.headers.get('Authorization').substring(7));
       this.router.navigate([''])
     }, () => {
       this.toast.error('The email or password is incorrect');
