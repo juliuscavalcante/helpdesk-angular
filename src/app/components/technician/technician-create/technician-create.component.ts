@@ -38,7 +38,7 @@ export class TechnicianCreateComponent implements OnInit {
 
   create(): void {
     this.service.create(this.technician).subscribe(() => {
-      this.toast.success('Successfully registered technician', 'Register');
+      this.toast.success('Technician registered successfully', 'Register');
       this.router.navigate(['technician']);
     }, ex => {
       console.log(ex);
