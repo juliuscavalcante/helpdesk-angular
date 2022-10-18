@@ -36,6 +36,7 @@ import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
 import { TechnicianCreateComponent } from './components/technician/technician-create/technician-create.component';
 import { NgxMaskModule } from "ngx-mask";
 import { TechnicianUpdateComponent } from './components/technician/technician-update/technician-update.component';
+import { TechnicianDeleteComponent } from './components/technician/technician-delete/technician-delete.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { TechnicianUpdateComponent } from './components/technician/technician-up
     LoginComponent,
     TechnicianCreateComponent,
     TechnicianUpdateComponent,
+    TechnicianDeleteComponent,
   ],
   imports: [
     BrowserModule,
