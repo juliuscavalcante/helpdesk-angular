@@ -7,6 +7,7 @@ import { LoginComponent } from "./components/login/login.component";
 import { AuthGuard } from "./auth/auth.guard";
 import { TechnicianCreateComponent } from "./components/technician/technician-create/technician-create.component";
 import { TechnicianUpdateComponent } from "./components/technician/technician-update/technician-update.component";
+import { TechnicianDeleteComponent } from "./components/technician/technician-delete/technician-delete.component";
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
 
       { path: 'technician', component: TechnicianListComponent },
       { path: 'technician/create', component: TechnicianCreateComponent },
-      { path: 'technician/update/:id', component: TechnicianUpdateComponent }
+      { path: 'technician/update/:id', component: TechnicianUpdateComponent },
+      { path: 'technician/delete/:id', component: TechnicianDeleteComponent }
     ]
   }
 ];
