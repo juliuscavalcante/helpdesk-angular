@@ -1,1 +1,58 @@
-<p>technician-delete works!</p>
+<div class="container mat-elevation-z8">
+    <form class="form">
+        <h1 class="fullWidth">Delete Technician</h1>
+        <img class="fullWidth" src="assets/img/tecnico-create.svg" alt="helpdesk technician create">
+
+        <section class="section">
+            <mat-checkbox [disabled]="true" class="margin" color="primary">Admin</mat-checkbox>
+            <mat-checkbox [disabled]="true" class="margin" color="primary">Customer</mat-checkbox>
+            <mat-checkbox [disabled]="true" class="margin" color="primary">Technician</mat-checkbox>
+        </section>
+
+        <mat-form-field class="fullWidth"  appearance="legacy">
+            <mat-label>Name</mat-label>
+            <input
+                    [(ngModel)]="technician.name"
+                    name="name"
+                    [disabled]="true"
+                    matInput >
+            <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth" appearance="legacy">
+            <mat-label>CPF</mat-label>
+            <input
+                    [(ngModel)]="technician.cpf"
+                    name="cpf"
+                    [disabled]="true"
+                    matInput >
+            <mat-icon matSuffix>pin</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth"  appearance="legacy">
+            <mat-label>E-mail</mat-label>
+            <input
+                    [(ngModel)]="technician.email"
+                    name="email"
+                    [disabled]="true"
+                    matInput >
+            <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth"  appearance="legacy">
+            <mat-label>Password</mat-label>
+            <input
+                    [(ngModel)]="technician.password"
+                    name="password"
+                    [disabled]="true"
+                    type="password"
+                    matInput >
+            <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field>
+
+        <button (click)="delete()"  class="fullWidth mat-elevation-z4" mat-flat-button color="primary">Delete</button>
+        <button routerLink="../../" class="fullWidth mat-elevation-z4" mat-stroked-button color="warn">Cancel</button>
+    </form>
+
+    <p class="fullWidth">Developed by Julius Cavalcante</p>
+</div>
