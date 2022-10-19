@@ -1,4 +1,4 @@
-export interface Technician {
+export interface Customer {
     id?: any;
     name: string;
     cpf: string;
