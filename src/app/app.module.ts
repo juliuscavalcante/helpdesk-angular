@@ -42,6 +42,7 @@ import { CustomerCreateComponent } from "./components/customer/customer-create/c
 import { CustomerUpdateComponent } from "./components/customer/customer-update/customer-update.component";
 import { CustomerDeleteComponent } from "./components/customer/customer-delete/customer-delete.component";
 import { RequestListComponent } from './components/request/request-list/request-list.component';
+import { CreateRequestComponent } from './components/request/create-request/create-request.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { RequestListComponent } from './components/request/request-list/request-
     CustomerCreateComponent,
     CustomerUpdateComponent,
     CustomerDeleteComponent,
-    RequestListComponent
+    RequestListComponent,
+    CreateRequestComponent
   ],
   imports: [
     BrowserModule,
