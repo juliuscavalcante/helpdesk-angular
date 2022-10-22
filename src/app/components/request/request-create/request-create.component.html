@@ -5,14 +5,19 @@
     <form class="form">
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>Request Title</mat-label>
-            <input matInput placeholder="Ex. request description" >
+            <input
+                    [formControl]="title"
+                    required
+                    matInput
+                    placeholder="Ex. request description" >
         </mat-form-field>
     </form>
 
     <div class="status-priority">
         <mat-form-field appearance="outline">
             <mat-label>Select Status</mat-label>
-            <mat-select>
+            <mat-select  [formControl]="status"
+                         required>
                 <mat-option value="0">OPEN</mat-option>
                 <mat-option value="1">PROGRESS</mat-option>
                 <mat-option value="2">CLOSED</mat-option>
@@ -21,7 +26,8 @@
 
         <mat-form-field appearance="outline">
             <mat-label>Select Priority</mat-label>
-            <mat-select>
+            <mat-select  [formControl]="priority"
+                         required>
                 <mat-option value="0">LOW</mat-option>
                 <mat-option value="1">MEDIUM</mat-option>
                 <mat-option value="2">HIGH</mat-option>
@@ -32,7 +38,8 @@
     <div class="technician">
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>Select Technician</mat-label>
-            <mat-select>
+            <mat-select  [formControl]="technician"
+                         required >
                 <mat-option value="0">technician</mat-option>
             </mat-select>
         </mat-form-field>
@@ -41,7 +48,8 @@
     <div class="customer">
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>Select Customer</mat-label>
-            <mat-select>
+            <mat-select  [formControl]="customer"
+                         required>
                 <mat-option value="0">customer</mat-option>
             </mat-select>
         </mat-form-field>
@@ -50,11 +58,16 @@
     <form class="form">
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>Description</mat-label>
-            <textarea class="description" matInput placeholder="Ex. service notes"></textarea>
+            <textarea
+                    [formControl]="description"
+                    required
+                    class="description"
+                    matInput
+                    placeholder="Ex. service notes"></textarea>
         </mat-form-field>
     </form>
 
-    <button class="full-width mat-elevation-z4" mat-raised-button color="primary">Create</button>
+    <button [disabled]="!fieldValidation()" class="full-width mat-elevation-z4" mat-raised-button color="primary">Create</button>
     <button class="full-width mat-elevation-z4" mat-stroked-button color="warn">Cancel</button>
 
     <p class="full-width" >Developer by Julius Cavalcante</p>
