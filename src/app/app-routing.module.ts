@@ -14,6 +14,7 @@ import { CustomerUpdateComponent}  from "./components/customer/customer-update/c
 import { CustomerDeleteComponent } from "./components/customer/customer-delete/customer-delete.component";
 import { RequestListComponent } from "./components/request/request-list/request-list.component";
 import { RequestCreateComponent } from "./components/request/request-create/request-create.component";
+import {RequestUpdateComponent} from "./components/request/request-update/request-update.component";
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -33,6 +34,7 @@ const routes: Routes = [
 
       { path: 'requests', component: RequestListComponent },
       { path: 'requests/create', component: RequestCreateComponent },
+      { path: 'requests/update/:id', component: RequestUpdateComponent },
     ]
   }
 ];
