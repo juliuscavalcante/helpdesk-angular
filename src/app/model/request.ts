@@ -5,7 +5,7 @@ export interface Request {
     priority: string;
     status: string
     title: string;
-    description: string;
+    notes: string;
     technician: any;
     customer: any;
     technicianName: string;
