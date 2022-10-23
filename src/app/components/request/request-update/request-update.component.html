@@ -17,7 +17,7 @@
 
     <div class="status-priority">
         <mat-form-field appearance="outline">
-            <mat-label>Select Status</mat-label>
+            <mat-label>{{ returnStatus(request.status) }}</mat-label>
             <mat-select
                     [(ngModel)]="request.status"
                     name="status"
@@ -30,7 +30,7 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline">
-            <mat-label>Select Priority</mat-label>
+            <mat-label>{{ returnPriority(request.priority) }}</mat-label>
             <mat-select
                     [(ngModel)]="request.priority"
                     name="priority"
@@ -45,7 +45,7 @@
 
     <div class="technician">
         <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Select Technician</mat-label>
+            <mat-label>{{ request.technicianName }}</mat-label>
             <mat-select
                     [(ngModel)]="request.technician"
                     name="technician"
@@ -58,7 +58,7 @@
 
     <div class="customer">
         <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Select Customer</mat-label>
+            <mat-label> {{ request.customerName }}</mat-label>
             <mat-select
                     [(ngModel)]="request.customer"
                     name="customer"
@@ -83,7 +83,7 @@
         </mat-form-field>
     </form>
 
-    <button (click)="create()" [disabled]="!fieldValidation()" class="full-width mat-elevation-z4" mat-raised-button color="primary">Update</button>
+    <button (click)="update()" [disabled]="!fieldValidation()" class="full-width mat-elevation-z4" mat-raised-button color="primary">Update</button>
     <button routerLink="../" class="full-width mat-elevation-z4" mat-stroked-button color="warn">Cancel</button>
 
     <p class="full-width" >Developed by Julius Cavalcante</p>
