@@ -10,6 +10,7 @@
             <input [formControl]="email" required
                    [(ngModel)]="credentials.email" name="email"
                    matInput placeholder="exemple@email.com">
+            <mat-icon matSuffix>email</mat-icon>
         </mat-form-field>
 
         <mat-form-field class="full-width" appearance="fill">
@@ -17,6 +18,7 @@
             <input [formControl]="password" required
                    [(ngModel)]="credentials.password" name="password"
                    type="password" matInput placeholder="@Password123" >
+            <mat-icon matSuffix>password</mat-icon>
         </mat-form-field>
 
         <button (click)="login() "[disabled]="!fieldValidation()" class="full-width mat-elevation-z4" mat-stroked-button color="primary">Login</button>
