@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
   login() {
     this.service.authenticate(this.credentials).subscribe(response => {
       this.service.successfulLogin(response.headers.get('Authorization').substring(7));
-      this.router.navigate([''])
+      this.router.navigate(['home'])
     }, () => {
       this.toast.error('The email or password is incorrect');
     })
