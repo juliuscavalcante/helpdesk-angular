@@ -7,3 +7,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Link do Projeto:
 
 https://helpdesk-angular-rho.vercel.app/
+
+<p>Usuário para acesso à aplicação:<br> 
+email: julius@email.com<br> 
+password: 123</p>
+
+
